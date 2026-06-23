@@ -29,10 +29,10 @@ jobs:
           password: ${{ secrets.PASSWORD }}
 
       - name: Build Docker Images
-        run: docker build -t ${{ secrets.USERNAME }}/typescript .
+        run: docker build -t typescript .
       
       - name: Push Docker Image
-        run: docker push ${{ secrets.USERNAME }}/typescript:latest
+        run: docker push typescript:latest
 
-      - name: Run Docker Container
-        run: docker run -d -p 3000:3000 --name my-container typescript
+      # - name: Run Docker Container
+      #   run: docker run -d -p 3000:3000 --name my-container typescript
