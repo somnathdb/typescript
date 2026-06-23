@@ -21,6 +21,3 @@ jobs:
       
       - name: Install Depe
         run: npm install
-      
-      - name: Build React Project
-        run: npm run build
