@@ -21,3 +21,9 @@ jobs:
       
       - name: Install Depe
         run: npm install
+
+      - name: Build Docker Images
+        run: docker build -t typescript .
+
+      - name: Run Docker Container
+        run: docker run -d -p 3000:3000 --name my-container typescript
